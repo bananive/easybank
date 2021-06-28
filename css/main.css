@@ -11,6 +11,7 @@
 body {
     margin: 0;
     font-family: 'Public Sans', sans-serif;
+    color: #2D314D;
 }
 
 /* Umumiy stillar */
@@ -22,7 +23,6 @@ body {
 
 .row {
     display: flex;
-    margin: 0 -15px;
 }
 
 a {
@@ -50,9 +50,11 @@ a {
 
 .main-header {
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 18px 0;
     background-color: #fff;
+    z-index: 99;
 }
 
 .main-header .row {
@@ -87,7 +89,87 @@ a {
 /* Intro */
 
 .intro {
+    position: relative;
     margin-top: 80px;
     padding: 170px 0;
     background-color: #FAFAFA;
+}
+
+.intro:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -65px;
+    width: 820px;
+    height: 886px;
+    background-image: url('../img/intro-bg.png');
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.intro-content {
+    width: 450px;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    /* color: #2D314D; */
+}
+
+.page-text {
+    font-size: 1.28rem;
+    line-height: 2rem;
+    color: #9597A5;
+}
+
+/* Why */
+
+.features {
+    padding: 90px 0;
+    background: #F4F5F7;
+}
+
+.page-title {
+    font-size: 2.85rem;
+    font-weight: 300;
+    line-height: 4.57rem;
+    /* color: #2D314D; */
+}
+
+.features .page-text {
+    max-width: 635px;
+    margin-bottom: 70px;
+}
+
+.features .row {
+    margin: 0 -15px;
+}
+
+.col4 {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.feature-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 0 40px;
+    padding: 16px;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #33D35E 0%, #2AB6D9 99.58%);
+}
+
+.feature-title {
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+.feature-text {
+    font-size: 1.15rem;
+    line-height: 1.85rem;
+    color: #9597A5;
 }
