@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+@import url(./fonts.css);
 
 * {
     box-sizing: border-box;
@@ -180,4 +181,116 @@ a {
     font-size: 1.15rem;
     line-height: 1.85rem;
     color: #9597A5;
+}
+
+/* Articles */
+
+.articles {
+    padding: 80px 0;
+    background-color: #fafafa;
+}
+
+.articles .page-title {
+    margin-bottom: 2.85rem;
+}
+
+.articles .row {
+    margin: 0 -15px;
+}
+
+.article {
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.article-image {
+    width: 100%;
+}
+
+.article-content {
+    padding: 24px;
+}
+
+.article-title {
+    font-size: 1.14rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.article-title a {
+    color: #2D314D;
+    transition: color 0.3s ease;
+}
+
+.article-title a:hover {
+    color: #30C88F;
+}
+
+.author {
+    font-size: 0.8rem;
+    color: #9597A5;
+}
+
+.article-text {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    color: #9597A5;
+}
+
+/* MAIN FOOTER */
+
+.main-footer {
+    padding: 48px 0;
+    text-align: right;
+    background-color: #2D314D;
+}
+
+.main-footer .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    text-align: left;
+}
+
+.social {
+    margin-top: 55px;
+    margin-right: 100px;
+}
+
+.social-link {
+    font-size: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-link:not(:last-child) {
+    margin-right: 13px;
+}
+
+.footer-list {
+    width: 160px;
+    margin: 0;
+    margin-left: 30px;
+}
+
+.footer-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.85rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover, .social-link:hover {
+    color: #30C88F;
+}
+
+.copyright {
+    color: #fff;
+    opacity: 0.5;
 }
