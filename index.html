@@ -21,11 +21,12 @@
 </head>
 <body>
 
-    <header class="main-header">
+    <header id="mainHeader" class="main-header">
         <div class="container">
             <div class="row">
                 <a href="#" class="logo"><img src="img/logo.svg" alt="Easybank logo"></a>
-                <button class="menu-toggle" onclick="buttonBosilganda()"><img src="img/menu.svg" alt=""></button>
+                <button class="menu-toggle open" onclick="openMenu()"><img src="img/menu.svg" alt=""></button>
+                <button class="menu-toggle close" onclick="closeMenu()"><img src="img/close.svg" alt=""></button>
                 <nav id="mainnav" class="main-nav">
                     <a href="#" class="main-nav-link">Home</a>
                     <a href="#" class="main-nav-link">About</a>
@@ -33,7 +34,7 @@
                     <a href="#" class="main-nav-link">Blog</a>
                     <a href="#" class="main-nav-link">Careers</a>
                 </nav>
-                <button type="button" class="btn">Request Invite</button>
+                <button type="button" class="btn" onclick="openModal()">Request Invite</button>
             </div>
         </div>
     </header>
@@ -44,7 +45,7 @@
                 <img src="img/intro-mob.png" class="mob-img" alt="phones">
                 <h1 class="main-title">Next generation digital banking</h1>
                 <p class="page-text">Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.</p>
-                <button type="button" class="btn">Request Invite</button>
+                <button type="button" class="btn" onclick="openModal()">Request Invite</button>
             </div>
         </div>
     </section>
@@ -177,16 +178,43 @@
         </div>
     </footer>
 
+    <!-- Request Invite Modal -->
+    <div class="modal" id="requestModal">
+        <div class="modal-content">
+            <button type="button" id="closeModal" onclick="closeModal()"><img src="img/close.svg" alt=""></button>
+            <form action="/" method="GET">
+                <h2>Contact form</h2>
+                <input type="text" placeholder="Ism kiriting">
+                <input type="tel" placeholder="Telefon kiriting">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+    <!-- End Request Invite Modal  -->
+
     <script>
 
         const menu = document.getElementById('mainnav');
+        const header = document.getElementById('mainHeader');
 
-        function buttonBosilganda() {
-            if (menu.style.display == 'none') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
+        function openMenu() {
+            menu.style.display = 'block';
+            header.classList = 'main-header on';
+        }
+
+        function closeMenu() {
+            menu.style.display = 'none';
+            header.classList = 'main-header';
+        }
+
+        const modal = document.getElementById('requestModal');
+
+        function openModal() {
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
         }
 
     </script>
