@@ -64,6 +64,14 @@
     }
     .main-nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        right: 15px;
+        background-color: aquamarine;
+    }
+    .main-nav-link {
+        display: block;
     }
     .menu-toggle {
         display: block;

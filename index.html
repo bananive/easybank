@@ -13,12 +13,11 @@
     <meta name="author" content="Fotima">
     <meta name="description" content="Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving, budgeting, investing, and much more.">
 
-    <meta property="twitter:image" content="https://repository-images.githubusercontent.com/266900712/950b3e80-9eb6-11ea-9b4e-010725c3cc11">
-    
     <title>Easybank</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="img/favicon.svg" type="image/x-icon">
+
 </head>
 <body>
 
@@ -26,8 +25,8 @@
         <div class="container">
             <div class="row">
                 <a href="#" class="logo"><img src="img/logo.svg" alt="Easybank logo"></a>
-                <button class="menu-toggle"><img src="img/menu.svg" alt=""></button>
-                <nav class="main-nav">
+                <button class="menu-toggle" onclick="buttonBosilganda()"><img src="img/menu.svg" alt=""></button>
+                <nav id="mainnav" class="main-nav">
                     <a href="#" class="main-nav-link">Home</a>
                     <a href="#" class="main-nav-link">About</a>
                     <a href="#" class="main-nav-link">Contact</a>
@@ -177,6 +176,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+
+        const menu = document.getElementById('mainnav');
+
+        function buttonBosilganda() {
+            if (menu.style.display == 'none') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+    </script>
 
 </body>
 </html>
